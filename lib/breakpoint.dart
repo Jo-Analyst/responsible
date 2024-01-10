@@ -1,1 +1,1 @@
-const mobile_breackpoints = 700;
+const int mobileBreackpoints = 700;

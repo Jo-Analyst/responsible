@@ -15,7 +15,7 @@ class WebAppBar extends StatelessWidget {
           const SizedBox(
             width: 12,
           ),
-          const WebAppBarResponsiveContent(),
+          const Expanded(child: WebAppBarResponsiveContent()),
           IconButton(
             onPressed: () {},
             icon: const Icon(Icons.shopping_cart),
