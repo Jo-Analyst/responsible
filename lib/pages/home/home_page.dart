@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsible/breakpoint.dart';
+import 'package:responsible/pages/home/widgets/section/top_section.dart';
 import 'package:responsible/pages/home/widgets/appbar/mobile_app_bar.dart';
 import 'package:responsible/pages/home/widgets/appbar/web_app_bar.dart';
 
@@ -19,12 +20,16 @@ class HomePage extends StatelessWidget {
                 : const WebAppBar(),
           ),
           body: Align(
-              alignment: Alignment.topCenter,
-              child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 1200),
-                  child: Container(
-                    color: Colors.brown,
-                  ))),
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1200),
+              child: ListView(
+                children: const [
+                  TopSection(),
+                ],
+              ),
+            ),
+          ),
           drawer:
               constraints.maxWidth < mobileBreackpoints ? const Drawer() : null,
         );
