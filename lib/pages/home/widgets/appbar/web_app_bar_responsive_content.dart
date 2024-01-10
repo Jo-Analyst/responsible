@@ -31,6 +31,29 @@ class WebAppBarResponsiveContent extends StatelessWidget {
                   ),
                 ),
               ),
+              Visibility(
+                visible: constraints.maxWidth >= 400,
+                child: Container(
+                  margin: const EdgeInsets.only(left: 32, right: 8),
+                  child: TextButton(
+                    style: TextButton.styleFrom(foregroundColor: Colors.white),
+                    onPressed: () {},
+                    child: const Text(
+                      'Aprender',
+                    ),
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: constraints.maxWidth >= 600,
+                child: TextButton(
+                  style: TextButton.styleFrom(foregroundColor: Colors.white),
+                  onPressed: () {},
+                  child: const Text(
+                    'Flutter',
+                  ),
+                ),
+              ),
             ],
           );
         },
