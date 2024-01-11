@@ -9,7 +9,7 @@ class AdvantangesSection extends StatelessWidget {
       return Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
+          const Icon(
             Icons.star,
             color: Colors.white,
             size: 50,
@@ -19,7 +19,7 @@ class AdvantangesSection extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -27,7 +27,7 @@ class AdvantangesSection extends StatelessWidget {
               ),
               Text(
                 subtitle,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               )
             ],
           )
@@ -37,7 +37,7 @@ class AdvantangesSection extends StatelessWidget {
 
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(color: Colors.grey),
         ),
