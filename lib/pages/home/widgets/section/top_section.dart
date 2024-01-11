@@ -55,7 +55,7 @@ class TopSection extends StatelessWidget {
                           SizedBox(
                             height: 16,
                           ),
-                          CustomSearchField()
+                          CustomSearchField(),
                         ],
                       ),
                     ),
@@ -110,7 +110,7 @@ class TopSection extends StatelessWidget {
                           SizedBox(
                             height: 16,
                           ),
-                          CustomSearchField()
+                          CustomSearchField(),
                         ],
                       ),
                     ),
@@ -121,7 +121,47 @@ class TopSection extends StatelessWidget {
           );
         }
 
-        return Container();
+        return Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 3.4,
+              child: Image.network(
+                'https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w940',
+                fit: BoxFit.cover,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Aprenda com este curso",
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Bora aprender Flutter com o professor Daniel Ciolfi! Cursos por apenas R\$22,90. Qualidade garantida.",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  CustomSearchField()
+                ],
+              ),
+            )
+          ],
+        );
       },
     );
   }
