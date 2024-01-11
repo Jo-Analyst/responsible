@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsible/breakpoint.dart';
+import 'package:responsible/pages/home/widgets/section/advantanges_section.dart';
 import 'package:responsible/pages/home/widgets/section/top_section.dart';
 import 'package:responsible/pages/home/widgets/appbar/mobile_app_bar.dart';
 import 'package:responsible/pages/home/widgets/appbar/web_app_bar.dart';
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
               child: ListView(
                 children: const [
                   TopSection(),
+                  AdvantangesSection(),
                 ],
               ),
             ),
