@@ -65,7 +65,7 @@ class TopSection extends StatelessWidget {
             ),
           );
         }
-        if (maxWidth >= mobileBreackpoints) {
+        if (maxWidth >= mobileBreakpoint) {
           return SizedBox(
             height: 320,
             child: Stack(

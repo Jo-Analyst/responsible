@@ -10,16 +10,23 @@ class CourseItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.network(
-            'https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'),
-        const SizedBox(height: 8),
-        const Flexible(
-          child: AutoSizeText(
-            'Criação de Apps Android e ios com Flutter. Crie 16 Apps',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 15,
-              color: Colors.white,
-            ),
+          'https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          fit: BoxFit.fitWidth,
+        ),
+        const SizedBox(height: 4),
+        Flexible(
+          child: LayoutBuilder(
+            builder: (_, constraints) {
+              return const AutoSizeText(
+                'Criação de Apps Android e iOS com Flutter - Crie 16 Apps',
+                minFontSize: 3,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: Colors.white,
+                ),
+              );
+            },
           ),
         ),
         const Text(
@@ -28,8 +35,12 @@ class CourseItem extends StatelessWidget {
         ),
         const Text(
           'R\$22,90',
-          style: TextStyle(color: Colors.white),
-        )
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 14,
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }

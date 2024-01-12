@@ -5,7 +5,7 @@ import 'package:responsible/pages/home/home_page.dart';
 void main() {
   runApp(DevicePreview(
     builder: (_) => const MyApp(),
-    enabled: false,
+    enabled: true,
   ));
 }
 

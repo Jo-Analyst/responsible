@@ -17,8 +17,8 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.black,
           appBar: PreferredSize(
             preferredSize: Size(double.infinity,
-                constraints.maxWidth < mobileBreackpoints ? 56 : 72),
-            child: constraints.maxWidth < mobileBreackpoints
+                constraints.maxWidth < mobileBreakpoint ? 56 : 72),
+            child: constraints.maxWidth < mobileBreakpoint
                 ? const MobileAppbar()
                 : const WebAppBar(),
           ),
@@ -29,14 +29,14 @@ class HomePage extends StatelessWidget {
               child: ListView(
                 children: const [
                   TopSection(),
-                  AdvantangesSection(),
+                  AdvantagesSection(),
                   CoursesSection()
                 ],
               ),
             ),
           ),
           drawer:
-              constraints.maxWidth < mobileBreackpoints ? const Drawer() : null,
+              constraints.maxWidth < mobileBreakpoint ? const Drawer() : null,
         );
       },
     );
